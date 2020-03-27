@@ -11,7 +11,9 @@
         android:roundIcon="@drawable/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchCountry"></activity>
+        <activity android:name=".IMap"></activity>
+        <activity android:name=".IRA" />
+        <activity android:name=".SearchCountry" />
         <activity android:name=".HeatMapWebview" />
         <activity android:name=".MainActivity">
             <intent-filter>

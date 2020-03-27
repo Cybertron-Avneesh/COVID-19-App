@@ -23,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:visibility="gone"
         app:cardCornerRadius="4dp"
@@ -355,28 +355,31 @@
 
     <Button
         android:id="@+id/btnHeatMap"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/orbitron"
         android:text="Global COVID-19 (Heat Map)"
         android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtCreator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnAnyCountry"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:autoText="true"
         android:fontFamily="@font/orbitron"
-        android:text="Get Stats for Particular Country"
+        android:text="Search Particular Country "
         android:textColor="#F57C00"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnHeatMap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -385,24 +388,75 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:fontFamily="@font/happy_monkey"
         android:text="App Requires Fast Internet Connection"
+        android:textSize="8sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/txtCreator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
         android:fontFamily="@font/orbitron"
-        android:text="Cy63rtr0N_4vn335H"
+        android:text="made by - Cy63rtr0N_4vn335H"
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="#1976D2"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/ic_refresh_black_24dp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/orbitron"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnRefresh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progressBar" />
+
+    <Button
+        android:id="@+id/btnIRA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/orbitron"
+        android:text="Infection Risk Analyser "
+        android:textColor="#388E3C"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnInteractiveMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnInteractiveMap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/orbitron"
+        android:text="Interactive Globe"
+        android:textColor="#0097A7"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnAnyCountry"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,14 +23,23 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.IdentityHashMap;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String Globl_stat_api = "https://thevirustracker.com/free-api?global=stats";
     // Global stats = https://thevirustracker.com/free-api?global=stats
     // Country-wise stats = https://thevirustracker.com/free-api?countryTotal=IN
     TextView total_cases,  total_recovered,  total_unresolved,  total_deaths,  total_new_cases_today,  total_new_deaths_today,  total_active_cases,  total_serious_cases;
-    Button btnHeatMap, btnAnyCountry;
+    Button btnHeatMap, btnAnyCountry, btnIRA, btnInteractiveMap;
     CardView cardView;
+    ImageButton btnRefresh;
+
+    TextView date;
 
 
     @Override
@@ -48,8 +58,20 @@ public class MainActivity extends AppCompatActivity {
         btnHeatMap = findViewById(R.id.btnHeatMap);
         btnAnyCountry = findViewById(R.id.btnAnyCountry);
         cardView = findViewById(R.id.cardView);
+        btnRefresh = findViewById(R.id.btnRefresh);
+        btnInteractiveMap = findViewById(R.id.btnInteractiveMap);
+        btnIRA = findViewById(R.id.btnIRA);
+        date = findViewById(R.id.date);
 
+        String currdate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        date.setText(currdate);
         loadGlobalStats();
+        total_serious_cases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         btnHeatMap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +86,28 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent next = new Intent(getApplicationContext(),SearchCountry.class);
                 startActivity(next);
+            }
+        });
+        btnIRA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(getApplicationContext(),IRA.class);
+                startActivity(next);
+            }
+        });
+
+        btnInteractiveMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(getApplicationContext(), IMap.class);
+                startActivity(next);
+            }
+        });
+        btnRefresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Fetching latest Data :)", Toast.LENGTH_SHORT).show();
+                loadGlobalStats();
             }
         });
 
@@ -83,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 //hiding the progressbar after completion
                 progressBar.setVisibility(View.INVISIBLE);
                 cardView.setVisibility(View.VISIBLE);
+
 
 
 
