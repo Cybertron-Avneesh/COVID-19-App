@@ -14,7 +14,6 @@ Download App from [here](https://github.com/Cybertron-Avneesh/COVID-19-App/raw/m
 |:---:|:---:|
 |<img src="ScreenShots/1.JPG" width="340" height="730" />|<img src="ScreenShots/3.JPG" width="340" height="730" />|
 |Infection Risk Analyser|Global Heat Map|
-|:---:|:---:|
 |<img src="ScreenShots/2.JPG" width="340" height="730" />|<img src="ScreenShots/.JPG" width="340" height="730" />|
 
 
