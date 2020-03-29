@@ -11,7 +11,7 @@ Download App from [here](https://github.com/Cybertron-Avneesh/COVID-19-App/raw/m
 ### Screenshots
 > Home Screen
 
-<img src="ScreenShots/1.JPG" width="150" height="320" />
+<img src="ScreenShots/1.JPG" width="190" height="400" />
 
 ### Credits
  - Used [Bing.com/covid](https://bing.com/covid)
