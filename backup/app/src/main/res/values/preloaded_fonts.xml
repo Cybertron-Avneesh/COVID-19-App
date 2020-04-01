@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/butcherman</item>
+        <item>@font/faster_one</item>
+        <item>@font/happy_monkey</item>
+        <item>@font/kite_one</item>
+        <item>@font/macondo_swash_caps</item>
+        <item>@font/nosifer</item>
+        <item>@font/orbitron</item>
+    </array>
+</resources>
