@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".SearchCountry">
 
+    <com.scwang.wave.MultiWaveHeader
+        android:id="@+id/waveView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleY="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <AutoCompleteTextView
         android:id="@+id/txtSearchCountry"
         android:layout_width="wrap_content"
@@ -42,15 +51,19 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        app:cardMaxElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar1"
-        android:visibility="gone">
+        app:layout_constraintTop_toBottomOf="@+id/progressBar1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
+            android:background="@drawable/virus"
             android:orientation="vertical">
 
             <TextView
@@ -63,6 +76,32 @@
                 android:textColor="#7B1FA2"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/macondo_swash_caps"
+                    android:text="Country's Danger Rank"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/danger_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nosifer"
+                    android:text="0"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#388E3C"
+                    android:textSize="18sp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
